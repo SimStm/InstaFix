@@ -95,6 +95,7 @@ func main() {
 	r.Get("/videos/{postID}/{mediaNum}", handlers.Videos)
 	r.Get("/grid/{postID}", handlers.Grid)
 	r.Get("/oembed", handlers.OEmbed)
+	r.Get("/api", handlers.API)
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		views.Home(w)
